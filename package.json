@@ -1,0 +1,22 @@
+{
+  "name": "clickhouse_kafka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "npm run protoc && npm run lint && tsc",
+    "protoc": "mkdir -p generated && pbjs -t static-module --no-comment -w commonjs -o generated/proto.js proto/*.proto && pbts -o generated/proto.d.ts generated/proto.js",
+    "lint": "node_modules/.bin/tslint ./**/*.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.7.4",
+    "kafkajs": "^1.12.0",
+    "protobufjs": "^6.8.8",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.2"
+  }
+}

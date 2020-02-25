@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option java_package = "com.clickhouse_kafka.kafka";
+option java_outer_classname = "KafkaProtoExample";
+
+package com.clickhouse_kafka.kafka;
+
+message Transaction {
+  string key = 1;
+  int64 num = 2;
+}
+
+//service Kafka {
+//  rpc method
+//}

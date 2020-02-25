@@ -1,0 +1,53 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["**/*.d.ts", "**/node_modules/**/*.ts", "dist", "coverage", "reports"]
+  },
+  "defaultSeverity": "warning",
+  "rules": {
+    "arrow-return-shorthand": [true, "multiline"],
+    "cyclomatic-complexity": [true, 20],
+    "eofline": false,
+    "forin": false,
+    "interface-name": [false, "never-prefix"],
+    "interface-over-type-literal": false,
+    "linebreak-style": [true, "LF"],
+    "max-line-length": {
+      "options": [180]
+    },
+    "member-access": [true, "no-public"],
+    "no-consecutive-blank-lines": [true, 1],
+    "no-duplicate-variable": true,
+    "no-object-literal-type-assertion": false,
+    "no-implicit-dependencies": [true, "dev"],
+    "no-mergeable-namespace": true,
+    "no-reference-import": true,
+    "no-switch-case-fall-through": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "object-literal-key-quotes": [true, "as-needed"],
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-first",
+        "named-imports-order": "lowercase-last"
+      }
+    ],
+    "prefer-method-signature": true,
+    "prefer-template": [true],
+    "quotemark": [true, "single", "avoid-escape"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "never",
+        "constructor": "never",
+        "method": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "switch-default": true
+  }
+}
